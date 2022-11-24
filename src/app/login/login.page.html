@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+  
+    <ion-card-content>
+
+      <ion-card>
+      <ion-item>
+        <ion-label>Email: </ion-label>
+        <ion-input type="email" placeholder="email@domain.com"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Senha: </ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-card>
+
+    <ion-button routerLink="/tabs/tab1" >Entrar</ion-button>
+<ion-button fill="clear">Esqueci a senha</ion-button>
+<ion-button routerLink="/registro" fill="outline">Registro</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
