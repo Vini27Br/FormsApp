@@ -27,6 +27,7 @@ export class RegistroPage{
    async salvarRegistro(){
     if(this.formRegistro.valid){
       this.usuario.nome = this.formRegistro.value.nome;
+      this.usuario.cpf = this.formRegistro.value.cpf;
       this.usuario.email = this.formRegistro.value.email;
       this.usuario.senha = this.formRegistro.value.senha;
       await this.storageService.set(this.usuario.email, this.usuario);

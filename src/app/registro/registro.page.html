@@ -46,6 +46,25 @@
               </span>
             </ng-container>
           </div>
+
+          <div class="input">
+          
+            <ion-input
+              formControlName="cpf"
+              color="button"
+              type="number"
+              placeholder="CPF"
+            ></ion-input>
+            <ng-container *ngFor="let erro of mensagens.cpf">
+              <span
+                class="msg-erro"
+                *ngIf="formRegistro.get('cpf').hasError(erro.tipo) && (formRegistro.get('cpf').dirty || formRegistro.get('cpf').touched)"
+              >
+                {{erro.mensagem}}
+              </span>
+            </ng-container>
+          </div>
+
           <div class="input">
       
             <ion-input
