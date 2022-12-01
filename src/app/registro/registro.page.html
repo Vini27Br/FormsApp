@@ -82,8 +82,10 @@
     </form>
     </ion-card>
 
-    <ion-button routerLink="/login">Registrar</ion-button>
-
+<div class="botao">
+<ion-button (click)="salvarRegistro()">Salvar</ion-button>
+<ion-button routerLink="/login" fill="outline" >Voltar</ion-button>
+</div>
 
     </ion-card-content>
   </ion-card>
