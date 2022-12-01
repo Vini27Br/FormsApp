@@ -11,20 +11,23 @@
 
       <ion-card>
       <ion-item>
-        <ion-label>Email: </ion-label>
-        <ion-input type="email" placeholder="email@domain.com"></ion-input>
+        <ion-label position="floating">E-mail</ion-label>
+        <ion-input type="email" placeholder="E-mail"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label>Senha: </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" placeholder="Senha"></ion-input>
       </ion-item>
     </ion-card>
 
-    <ion-button routerLink="/tabs/tab1" >Entrar</ion-button>
-<ion-button fill="clear">Esqueci a senha</ion-button>
-<ion-button routerLink="/registro" fill="outline">Registro</ion-button>
+    <ion-button routerLink="/tabs/tab1" color="tertiary">Entrar</ion-button>
 
+    <ion-button fill="clear" color="medium">Esqueci a senha</ion-button>
+
+    <div class="afasta">
+<ion-button routerLink="/registro" fill="outline" color="tertiary">Registro</ion-button>
+</div>
     </ion-card-content>
   </ion-card>
 </ion-content>

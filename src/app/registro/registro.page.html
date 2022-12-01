@@ -7,14 +7,15 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Registro</ion-card-title>
+      <ion-card-title>Registrar</ion-card-title>
     </ion-card-header>
   
     <ion-card-content>
       
       <ion-card>
         <form [formGroup]="formRegistro">
-          <div class="input">
+          <ion-item class="input">
+            <ion-label position="floating">Nome</ion-label>
             <ion-input
               formControlName="nome"
               color="button"
@@ -28,14 +29,15 @@
                 {{erro.mensagem}}
               </span>
             </ng-container>
-          </div>
+          </ion-item>
         
-          <div class="input">
+          <ion-item class="input">
+            <ion-label position="floating">E-mail</ion-label>
             <ion-input
               formControlName="email"
               color="button"
               type="email"
-              placeholder="email"
+              placeholder="E-mail"
             ></ion-input>
             <ng-container *ngFor="let erro of mensagens.email">
               <span
@@ -45,10 +47,10 @@
                 {{erro.mensagem}}
               </span>
             </ng-container>
-          </div>
+          </ion-item>
 
-          <div class="input">
-          
+          <ion-item class="input">
+            <ion-label position="floating">CPF</ion-label>
             <ion-input
               formControlName="cpf"
               color="button"
@@ -63,10 +65,10 @@
                 {{erro.mensagem}}
               </span>
             </ng-container>
-          </div>
+          </ion-item>
 
-          <div class="input">
-      
+          <ion-item class="input">
+            <ion-label position="floating">Senha</ion-label>
             <ion-input
               formControlName="senha"
               color="button"
@@ -81,8 +83,11 @@
                 {{erro.mensagem}}
               </span>
             </ng-container>
-          </div>
-          <div class="input">
+          </ion-item>
+
+
+          <ion-item class="input">
+            <ion-label position="floating">Confirmar Senha</ion-label>
             <ion-input
               formControlName="confirmaSenha"
               color="button"
@@ -97,13 +102,13 @@
                 {{erro.mensagem}}
               </span>
             </ng-container>
-          </div>
+          </ion-item>
     </form>
     </ion-card>
 
 <div class="botao">
-<ion-button (click)="salvarRegistro()">Salvar</ion-button>
-<ion-button routerLink="/login" fill="outline" >Voltar</ion-button>
+<ion-button (click)="salvarRegistro()" color="tertiary">Salvar</ion-button>
+<ion-button routerLink="/login" fill="outline" color="tertiary">Voltar</ion-button>
 </div>
 
     </ion-card-content>
